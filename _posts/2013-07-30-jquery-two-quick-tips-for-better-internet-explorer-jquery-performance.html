@@ -1,0 +1,62 @@
+---
+layout: post
+title: 'jQuery: Two quick tips for better Internet Explorer jQuery performance'
+categories:
+- JavaScript
+tags:
+- front end
+- jQuery
+- productivity
+status: publish
+type: post
+published: true
+meta:
+  _edit_last: '1'
+  _wpas_done_all: '1'
+---
+The other day at work I had an issue assigned to me regarding JavaScript performance, particularly in Internet Explorer versions 7 and 8. Due to little more than the age of these browsers meaning their JavaScript engine performance wasn't exactly high on the list of key features when being released, the user base of a web application may however be still be using these browser versions (in situations such as corporate networks). I thought I'd jot down the two main solutions I employed increase the jQuery performance of an application at work (by essentially changing a tiny part of how the jQuery was written).
+
+Whilst modern browsers have fast JavaScript engines (especially Chrome's V8 and Safari's Nitro), those browsers from years gone by can benefit from a little jQuery tweak here and there to get some performance gains. These two "quick wins" are as follows:
+<h3 class="h3">Put query selector objects for large operations in memory first</h3>
+As simple as this may sound, putting the jQuery object returned from a selector query into memory first, and referencing that variable can give performance gains of up to 10% in IE7 and IE8. Consider this piece of code:
+
+<code>
+$(".aClass &gt; .bClass").each(function() {
+alert($(this).classList);
+});
+</code>
+
+This is expensive in terms of jQuery having to constantly pelt the DOM. This can be re-written to use a local variable before the each() is invoked:
+
+<code>
+var whatIAmQuerying = $(".aClass &gt; .bClass");
+whatIAmQuerying.each(function() {
+alert($(this).classList);
+});
+</code>
+
+Much better. However, in true Columbo style, "there's just one more thing", and that involves dealing with each().
+
+<h3 class="h3">for(), not each()</h3>
+
+The each() function in jQuery, whilst helpful, is very inefficient in terms of performance. It essentially wraps the for loop, using the return from a jQuery selector or a jQuery object as the basis for the items to be looped. Let's visit the example from the previous tip:
+
+<code>
+var whatIAmQuerying = $(".aClass &gt; .bClass");
+whatIAmQuerying.each(function() {
+alert($(this).classList);
+});
+</code>
+
+The each function here will loop through every item in the whatAmIQuerying variable. This can be re-written using a for loop, which gives the performance gain of not having to create and invoke an anonymous function on every item in the variable being iterated. Here's the above example re-written using a for loop:
+
+<code>
+var whatIAmQuerying = $(".aClass &gt; .bClass");
+for (var i = 0; i &lt; whatIAmQuerying.length; i++) {
+alert(whatAmIQuerying[i].classList);
+};
+</code>
+
+You'll notice the reference to $(this) is removed too. This is because we already have a much faster way of determining where we are (using the iterator, which I have called "i" in this case). This small change from each() to for() means up to a 20% gain typically in IE7 and IE8.
+
+Combine these two tips together and up to 30% better IE7 and IE8 performance will be yours.

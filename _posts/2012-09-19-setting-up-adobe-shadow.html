@@ -1,0 +1,34 @@
+---
+layout: post
+title: Setting up Adobe Shadow
+categories:
+- responsive design
+- testing
+tags:
+- design
+- useful
+status: publish
+type: post
+published: true
+meta:
+  _edit_last: '1'
+---
+In the wonderful world of <a title="Responsive Web Design on Wikipedia" href="http://en.wikipedia.org/wiki/Responsive_Web_Design" target="_blank">responsive web design</a>, the walls have truly been broken down in terms of both who can access the web, and what they access the web on. The multitude of different mobile devices, tablet sizes, differing laptop form factors, and differing desktop screen sizes means that testing has required more browsers on more devices to be supported, simply because no assumptions can be made anymore about what your audience is accessing your web application on. In an effort to alleviate the pain of testing a website on several mobile devices separately, <a title="Adobe Shadow" href="http://labs.adobe.com/technologies/shadow/" target="_blank">Adobe Shadow</a> has entered the fray.
+
+As part of a test suite at work, the was a necessity to include <a title="Apple - iPhone" href="http://www.apple.com/iphone/" target="_blank">iPhone</a>, <a title="Apple - iPad" href="http://www.apple.com/ipad/" target="_blank">iPad</a> and <a title="Android" href="http://www.android.com/" target="_blank">Android</a> device support. With <a title="Selenium" href="http://seleniumhq.org/" target="_blank">another key player in automated browser testing</a> not fully supporting mobile devices yet, I decided to have a go at setting up Adobe Shadow on the mobile devices in the test suite (it should be noted that it is still in beta at the time of writing).
+
+As per the instruction page on the Adobe Shadow site, I downloaded the <a title="Adobe Shadow downloads" href="http://labs.adobe.com/downloads/shadow.html" target="_blank">Shadow helper application</a>, <a title="Adobe Shadow Chrome extension" href="https://chrome.google.com/webstore/detail/ijoeapleklopieoejahbpdnhkjjgddem" target="_blank">Chrome extension</a> and then installed these on an iMac that's on the same wireless network as the mobile devices. Lastly, I installed the Adobe Shadow app on each mobile device (by navigating to the AppStore equivalent for each of the supported mobile devices):
+<ul>
+	<li>Adobe Shadow for <a title="Adobe Shadow for iOS" href="http://www.adobe.com/go/sd_ios_app" target="_blank">iPhone/iPad</a></li>
+	<li>Adobe Shadow for <a title="Adobe Shadow for Android" href="http://www.adobe.com/go/sd_android_app" target="_blank">Android</a></li>
+	<li>Adobe Shadow for <a title="Adobe Shadow for Kindle Fire" href="http://www.adobe.com/go/sd_amazon_android_app" target="_blank">Kindle Fire</a></li>
+</ul>
+Upon launching the app on one of the mobile devices, the connection to the host machine on which the Shadow helper app can be selected, and then a numeric code is generated. This needs to be entered when clicking the corresponding device connection in the Chrome extension to pair the devices (this only has to be done once, as the devices will automatically connect thereafter).
+
+The video on how to set up Adobe Shadow can be found <a title="Adobe Shadow introductory video" href="http://tv.adobe.com/watch/adobe-technology-sneaks-2012/adobe-shadow/" target="_blank">here</a>.
+
+Once devices are connected, a URL can be hit in Chrome on the host machine and all connected devices will hit the same URL. Very useful time saver for testing responsive designs on a multitude of devices!
+
+<em>Edit:</em>
+
+Adobe Shadow is now called Adobe Edge Inspect, and can be found at: <a title="Adobe Edge Inspect at Adobe.com" href="http://html.adobe.com/edge/inspect/">http://html.adobe.com/edge/inspect/</a>

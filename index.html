@@ -1,10 +1,13 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>aaronallport.com via GitHub Pages - Under construction</title>
-</head>
-<body>
-<h1>Hello World</h1>
-<p>I'm hosted with GitHub Pages, and still under construction. Please come back soon. In the meantime, check me out <a href="http://twitter.com/aaronallport">twitter</a> or on <a href="https://github.com/aaronallport">GitHub</a>. Thank you and see you soon!</p>
-</body>
-</html>
+---
+layout: default
+title: aaronallport.com
+---
+
+<div id="home">
+  <h1>Blog Posts</h1>
+  <ul class="posts">
+    {% for post in site.posts %}
+      <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
+    {% endfor %}
+  </ul>
+</div>

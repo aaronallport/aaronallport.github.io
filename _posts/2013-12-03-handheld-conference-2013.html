@@ -1,0 +1,251 @@
+---
+layout: post
+title: HandHeld Conference 2013
+categories:
+- responsive design
+- Review
+- Web Development
+tags:
+- conferences
+- design
+- front end
+- useful
+- work flow
+status: publish
+type: post
+published: true
+meta:
+  _edit_last: '1'
+  switch_like_status: '1'
+  _wpas_done_all: '1'
+---
+Back in April, I requested through my boss at the time to attend a web development conference called <a href="http://www.handheldconf.com/">HandHeld</a>. It promised to be a great event, with speakers including <a href="http://adactio.com/">Jeremy Keith</a> and <a href="http://zeldman.com/">Jeffrey Zeldman</a>. I was lucky to have this request approved, and therefore spent two nights away last week attending this great event, held at the Millennium Centre at Cardiff. Before the main event on the Thursday, I went along to a pre-conference event on the Wednesday evening. It consisted of several 20 minute talks on <a href="http://arduino.cc/">Arduino</a> experiments, <a href="http://nodecopter.com/">NodeCopter</a> demo's and the like. Very interesting stuff - I've never seen a JavaScript-programmed drone bouncing to dub-step before!
+
+Thursday saw the conference proper take place. Starting bright and early, the audience played <a href="http://en.wikipedia.org/wiki/Guess_Who%3F">Guess Who?</a> using SMS and lasers - nothing specific to take away here, as it was more of an exercise to get the audience engaged at the start of the day. In between each talk was a small feature or comedic interlude, featuring everything from the Welsh national anthem being played Hendrix-style on the guitar through to gymnasts climbing high into the air. For me, <a href="http://www.brucelawson.co.uk/2013/handheld-conference-2013-review/">Bruce Lawson's comedic guitar performances</a> and the <a href="http://vimeo.com/80718034">open letter to the industry</a> were spot-on.
+
+I've summarised the talks given during the conference below:
+<h2><strong>The Long Web - Jeremy Keith</strong></h2>
+<a href="http://adactio.com/">Jeremy Keith</a> is someone I first had the pleasure of meeting back in 2005 when I worked for a large Swiss agri-business during my industrial placement year at university. Jeremy gave a talk entitled "The long web", with the major theme being about introducing longevity in to everything we do when developing for the web. The main theme is one that resonates with responsive deign principles: You cannot predict what device someone is using. He goes on to talk about making web pages work at any time, past and future.
+<ul>
+	<li>Set up a device lab - having a broad spectrum of devices with differing screen sizes, resolutions and capabilities gives a nice broad spectrum to future-proof your site. If you cannot set one up, check out <a href="http://opendevicelab.com/">open device lab</a> to see if there is a public device lab you can use.</li>
+	<li>Content is king. Think - what is the most important task the user needs to do on a page? That is what your content needs to be geared towards.</li>
+	<li>Design from URL-first. URL's should be readable, guessable, and hackable.</li>
+	<li>Be modular. Build from atomic elements. See <a title="https://github.com/adactio/Pattern-Primer" href="https://github.com/adactio/Pattern-Primer">adactio/Pattern-Primer · GitHub</a> for a place to start (also, see <a href="http://pattern-lab.info/">Brad Frost's Pattern Lab</a>)</li>
+	<li>Navigation should come second to content (as content rules the roost) - see the navigation pattern on <a href="http://thesession.org/">The Session</a> for an example (those on a desktop will need to shrink their browser window to emulate a mobile screen size)</li>
+	<li>Progressive enhancement is still relevant. There are users on less-capable devices than you!</li>
+	<li>JavaScript usage - ensure you have feature detection in place. HTML and CSS are backwards compatible, whereas JavaScript isn't:
+<ul>
+	<li>HTML elements still have their contents rendered if the parent element isn't understood by the browser.</li>
+	<li>CSS declarations are ignored if they aren't understood by the browser.</li>
+	<li>JavaScript should not be the single point of failure for a site.</li>
+</ul>
+</li>
+	<li>Progressive Enhancement acknowledges that there are things that you can't see yet (future enhancements to specifications, for example).</li>
+	<li><a href="http://en.wikipedia.org/wiki/Scalable_Vector_Graphics">SVG</a> is a great image format - you can put CSS and JavaScript within SVG declarations (it is XML, after all)!</li>
+	<li>Use conditional loading for features that are "nice to have" but not essential.</li>
+	<li>Never be reliant on a 3rd party service (imagine your site being halted from loading because the <a href="http://twitter.com/">Twitter</a> JavaScript fails).</li>
+	<li>Check out <a href="http://futurefriend.ly/">Future Friendly</a> - by design, be backwards compatible!</li>
+</ul>
+<h2>Icon Design Process - Jon Hicks</h2>
+Jon Hicks is the guy behind the <a href="http://getfirefox.com/">FireFox</a> logo. He has designed for large clients around the world, including such names as <a href="http://shopify.com/">Shopify</a>. He runs a <a href="http://hicksdesign.co.uk/">studio based in Oxfordshire</a>.
+
+<strong>Why use custom icon fonts?</strong>
+<ul>
+	<li>One small file</li>
+	<li>Completely scalable</li>
+	<li>Accessible (when used as part of the private unicode area of a font)</li>
+	<li>Easily styled with CSS</li>
+	<li>Supported in IE4+</li>
+</ul>
+<strong>Why don't we use custom icon fonts?</strong>
+<ul>
+	<li>Fiddly creation process</li>
+	<li>No semantic meaning to icons</li>
+	<li>Only monochrome (there is a way round this, using ligatures. These are a way of tying letters together in an open type format. See the BBC weather site for an example).</li>
+</ul>
+<strong>Why make your own icon fonts?</strong>
+<ul>
+	<li>If there isn't anything out in the wild that is fit for purpose, then creating your own icon font is the only way to go.</li>
+</ul>
+<strong>The Icon Audit</strong>
+
+Before the icon font creation process can begin, an "icon audit" first needs to be carried out. This is used to:
+<ul>
+	<li>Determine what is in place already</li>
+	<li>Determine what is needed
+<ul>
+	<li>Try sizes, styles, filenames and different ideas out</li>
+</ul>
+</li>
+	<li>A 16px grid is a good base from which to design fonts around, but don't write off odd-number grids, as icons for arrows and the like benefit from a single pixel on the end of pointed objects for sharpness.</li>
+</ul>
+<strong>The 3 elements to an icon font</strong>
+<ul>
+	<li>Metaphor
+<ul>
+	<li>Iconic icon fonts - realistic and familiar items. Little or no learning curve</li>
+	<li>Symbolic - abstract items, and these need to be learnt</li>
+	<li>Follow conventions - see <a href="http://thenounproject.com/">The Noun Project</a> (tag search works best)</li>
+</ul>
+</li>
+	<li>Style
+<ul>
+	<li>Don't get fancy - simple is best</li>
+	<li>Think about the context in which the icons are to be used</li>
+</ul>
+</li>
+	<li>Grid
+<ul>
+	<li>Decide on icon size</li>
+	<li>File formats are important</li>
+	<li>Look at icons next to each other:
+<ul>
+	<li>Use space effectively</li>
+	<li>Look at where the visual weight is</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<strong>Useful services:</strong>
+<ul>
+	<li><a href="http://fontcustom.com/">Font Custom</a></li>
+	<li><a href="http://icomoon.io/">IcoMoon</a></li>
+	<li><a href="http://www.fivesimplesteps.com/products/the-icon-handbook">The Icon Handbook</a></li>
+</ul>
+<strong>Lastly</strong> - don't forget to add the following attribute to any HTML element being used as a "hook" for an icon: aria-hidden="true"
+<h2>The Business of Responsive Web Design - Mark Boulton</h2>
+<a href="http://markboulton.co.uk/">Mark Boulton</a>, of <a href="http://www.markboultondesign.com/">Mark Boulton Design</a>, gave a talk about what responsive web design means.
+
+Responsive Web Design is about CHANGE. That change is broken down into three areas: Content, Process and "The Trend". These are described below:
+
+<strong>Content</strong>
+<ul>
+	<li>Target your audience effectively</li>
+	<li>The same story in different words in different environments is ok!</li>
+</ul>
+<strong>Process</strong>
+<ul>
+	<li>Client accounts, not client projects are what are to be pitched for.</li>
+	<li>Clients need to see "just enough" detail. No one wants to see how sausages are made, for example, but everyone wants to know what is in the sausages they eat.</li>
+	<li>Do the "rope a dope". Let the client beat everything out of their system.</li>
+	<li>Don't hide from content</li>
+	<li>Write content and the client will change it so urgently, it'll be like they've got a rocket up their back-side.</li>
+	<li>Retrospectives are important. Insist on their inclusion to a project</li>
+	<li>There is no "big reveal".</li>
+</ul>
+<strong> The Trend</strong>
+<ul>
+	<li>"We need a responsive &lt;INSERT THING HERE&gt;" - seems to be the trend these days. Think about when responsive web design is more appropriate.</li>
+	<li>Add up any marginal gains to be made. Add these up and always look across everything you do. Add marginally where you can. Iteration is the trend. Iterate on what you have and your product will forever be on trend.</li>
+	<li>Don't strive for perfection! It doesn't exist!</li>
+</ul>
+<h2>Carefully Everywhere - Brendan Dawes</h2>
+<a href="http://brendandawes.com/">Brendan Dawes</a> is a data visualiser. He advocates the use of data to tell stories. A few key points from what was a demo-heavy presentation:
+<ul>
+	<li>Surface stories with data. Make the horrible beautiful</li>
+	<li>Symbolise and summarise data</li>
+	<li>Tell a story. The pitch for the film <a href="http://www.imdb.com/title/tt0078748/?ref_=fn_al_tt_1">Alien</a> was simple an succinct - "It's Jaws in Space" said <a href="http://www.imdb.com/name/nm0000631/?ref_=tt_ov_dr">Ridley Scott</a> when pitching the idea for the Alien film.</li>
+	<li>Data needs poetry</li>
+	<li>Everything is a number - use data to make beautiful things.</li>
+</ul>
+<h2>When responsive sites work as well as a chocolate iPhone - Ling Valentine</h2>
+Quite possibly the best entrance to a talk I've ever seen. <a href="http://www.lingscars.com/">Ling Valentine</a> arrived in a <a href="http://en.wikipedia.org/wiki/Dalek">BBC Dalek</a>, being pushed on stage by <a href="http://stuffandnonsense.co.uk/">Andy Clarke</a> and <a href="http://hicksdesign.co.uk/">Jon Hicks</a>. Upon popping the lid she gave a superbly comedic speech about how mobile experiences have to be tailored. She runs a <a href="http://www.lingscars.com/">car-leasing business</a>, and therefore she has a lot of information that people would naturally want to research. Her desktop experience is the only practical medium to do this, and therefore her "mobile site" is actually a few gimmicks with the serious intention of directing folk to her desktop website. She's generating a net profit of £400,00 a year, so it must be right. Key points from her talk:
+<ul>
+	<li>People need to feel good about purchasing decisions they make, such as buying a car.</li>
+	<li>In these circumstances, a mobile site may be better placed as a "taster" to the full desktop site.</li>
+	<li>Desktop web sites are a more private experience, and therefore far better suited to the purchasing of expensive items (such as cars) than a social, mobile site.</li>
+</ul>
+<h2>Building the HandHeld Conference Website - Eddie Machado</h2>
+<a href="https://twitter.com/eddiemachado">Eddie Machado</a> was tasked with building the <a href="http://handheldconf.com/">2013 website for HandHeld</a>, and he shared his experiences in doing so.
+
+Key points to take away:
+<ul>
+	<li>Clients love homework. Give them something to do, and they will feel involved. It help them to care about whats going on.</li>
+	<li>Use <a href="http://aarronwalter.com/design-personas/">design personas</a>.</li>
+	<li>Gather as much information as you can before you begin a project.</li>
+	<li>Sketch everything. It is a fast way of visualising an idea.</li>
+	<li>Don't hold out for a "big reveal". Iterate continuously.</li>
+	<li>Figure out what you can and cannot do - know your limitations.</li>
+	<li>Use saturated colours in your existing site colour palette for borders and the like - it keeps a sense of uniformity.</li>
+	<li>Don't use "ie" in a CSS filename for legacy browser support. There are other legacy browsers than Internet Explorer. Use "fixed" instead to denote that it is a stylesheet intended for fixed width experiences.</li>
+	<li>Use progressive images (those that start blurry and slowly render). It gives the user the impression that something is happening, which is particularly important for mobile devices.</li>
+	<li>Lastly, build a project your own way. Frameworks are great, but it is too easy to get sucked into another persons way of working.</li>
+</ul>
+He shared some useful resources he found along the way too:
+<ul>
+	<li><a title="http://sassme.arc90.com/" href="http://sassme.arc90.com/">SassMe | A Tool for Visualizing SASS Color Functions</a></li>
+	<li><a title="http://mobitest.akamai.com/m/index.cgi" href="http://mobitest.akamai.com/m/index.cgi">Free Mobile Performance Testing with Akamai's Mobitest</a></li>
+	<li><a title="http://tools.pingdom.com/fpt/" href="http://tools.pingdom.com/fpt/">Website speed test</a></li>
+</ul>
+<h2>How to call your client an idiot without getting fired - Andy Clarke</h2>
+<a href="http://twitter.com/Malarkey">Andy Clarke</a>, author of Hardboiled Web Design and owner of <a href="http://stuffandnonsense.co.uk/">Stuff and Nonsense</a>, gave a talk without using slides about his experiences in dealing with clients.
+
+In summary, his points for effective client relationships and steady project progression are as follows:
+<ul>
+	<li>Communication is key</li>
+	<li>Don't ever blame the client</li>
+	<li>Have focussed conversations</li>
+	<li>Don't set the wrong expectations</li>
+	<li>Put prototypes, not static visuals, to clients. It is an artefact or deliverable too!</li>
+	<li>Never email pictures to clients and expect the required response.</li>
+	<li>There should never be a "big reveal"</li>
+	<li>Ask for specific feedback during conversations. Ideally, such discussions would only be face-to-face</li>
+	<li>Only people that turn up to a design review can give feedback</li>
+	<li>Leave feelings at the door. The work matters.</li>
+	<li>Encourage clients to get their points across. It works both ways, so discuss each and every point raised. Raise your own points if the client doesn't mention something you wish to discuss.</li>
+	<li>The client should understand that at all times, their interests are at heart.</li>
+</ul>
+<h2>Ten Commandments of Modern Web Design - Jeffrey Zeldman</h2>
+The father of web standards, <a href="http://www.zeldman.com/">Jeffrey Zeldman</a>, gave the closing presentation of HandHeld Conference 2013. Entitled "The Commandments of Modern Web Design", Jeffrey gave one of the best presentations I've ever heard. Here's the commandments in all their glory.
+<ol>
+	<li>Entertain
+<ul>
+	<li>Say "hi" to users.</li>
+	<li>Draw and make things. Make a style. Use yourself.</li>
+	<li>a 404 is an opportunity to entertain</li>
+</ul>
+</li>
+	<li>Test everything (including assumptions)
+<ul>
+	<li>See <a title="http://cognition.happycog.com/article/building-the-happy-cog-test-lab" href="http://cognition.happycog.com/article/building-the-happy-cog-test-lab">Building the Happy Cog Test Lab - Cognition: The blog of web design &amp; development firm Happy Cog</a> and <a title="http://bradfrostweb.com/blog/mobile/test-on-real-mobile-devices-without-breaking-the-bank/" href="http://bradfrostweb.com/blog/mobile/test-on-real-mobile-devices-without-breaking-the-bank/">Test on Real Mobile Devices without Breaking the Bank | Brad Frost Web</a></li>
+</ul>
+</li>
+	<li>Iterate
+<ul>
+	<li>Make things better. Constantly. By was of little nudges in functionality.</li>
+</ul>
+</li>
+	<li>Ship</li>
+	<li>Engage thy community</li>
+	<li>Love thy user as thy self
+<ul>
+	<li>Don't assume what users want</li>
+	<li>Assume prioritisation however</li>
+</ul>
+</li>
+	<li>Remember content and keep it holy
+<ul>
+	<li>Right content, to the right user, at the right time</li>
+</ul>
+</li>
+	<li>Make magic
+<ul>
+	<li>But don't chase perfection</li>
+</ul>
+</li>
+	<li>Prioritise
+<ul>
+	<li>See <a title="http://www.wikihow.com/Prioritize" href="http://www.wikihow.com/Prioritize">How to Prioritize: 12 Steps (with Pictures) - wikiHow</a> and <a title="http://alistapart.com/article/kick-ass-kickoff-meetings" href="http://alistapart.com/article/kick-ass-kickoff-meetings">Kick Ass Kickoff Meetings · An A List Apart Article</a></li>
+</ul>
+</li>
+	<li>Be true to yourself
+<ul>
+	<li>If you have perfection, leave it at that!</li>
+</ul>
+</li>
+</ol>
+<h2>Finally</h2>
+Sadly, it was announced that the 2013 HandHeld conference was to be the last. A shame really, given that 1200 conference-goers walked away re-energised about how great developing for the web is.
+
+I for one am feeling great about the skills I have and the work that I do. Developing for the web is an exciting place to be right now, with its rapid pace of advancement showing no slow-down.

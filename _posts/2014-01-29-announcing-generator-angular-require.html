@@ -1,0 +1,39 @@
+---
+layout: post
+title: Announcing generator-angular-require
+categories:
+- Development
+- JavaScript
+- Yeoman
+tags:
+- automation
+- grunt
+- productivity
+- tooling
+- useful
+- work flow
+status: publish
+type: post
+published: true
+meta:
+  _edit_last: '1'
+  _wpas_done_all: '1'
+---
+I'm proud to announce the release of my first Yeoman generator, designed specifically to scaffold out and enforce a degree of rigour when working with <a title="AngularJS" href="http://angularjs.org/">AngularJS</a> projects that use <a title="RequireJS" href="http://requirejs.org/">RequireJS</a> for module loading.
+
+When creating a project using yo angular-require in your terminal/command prompt and answering the few questions you are presented with, a scaffolded, AMD-based AngularJS project is created, with the RequireJS configuration tokenised appropriately. Also included are sub-generators for creating new routes, views, directives, services, and so on. These ensure that the <a title="The AMD JavaScript pattern" href="http://requirejs.org/docs/whyamd.html#amd">AMD JavaScript pattern</a> is used throughout and the project has a predictable structure. Of course you are free to fork the <a title="generator-angular-require on GitHub" href="https://github.com/aaronallport/generator-angular-require">project on GitHub</a> and tailor it to work for you if that's what you need!
+<h2>How to install</h2>
+Assuming you've node and Yeoman installed, type the following to install generator-angular-require (you may need to run this as an administrator/root):
+<pre>npm install -g generator-angular-require</pre>
+<h2>How to run generator-angular-require</h2>
+Running the generator is easy. Create the directory in which you wish to place your web application and navigate to it in your terminal/command prompt. Then, issue the following command, substituting &lt;APP_NAME&gt; for the name of your project:
+<pre>yo angular-require &lt;APP_NAME&gt;</pre>
+You'll find a directory and file setup that includes your app scaffolded, and importantly a Gruntfile. <a title="Grunt" href="http://gruntjs.com/">Grunt</a> is used as the typical build tool in Yeoman applications at present. Issue the following to build your new project:
+<pre>grunt</pre>
+That's it to build your project. Grunt will take care of linting, image optimisation, running the <a title="ngmin on GitHub" href="https://github.com/btford/ngmin">ngmin tool</a> against your AngularJS code, minification and a whole heap of useful goodness. When that is done, issue the following to server up your app and watch for file changes so that they can be seen instantly:
+<pre>grunt serve</pre>
+You'll find a browser window will open with your application proudly displayed. Try changing a file, and upon saving you'll notice the changes are reflected right there in the browser. Superb!
+<h2>What is Yeoman?</h2>
+Taken from the Yeoman homepage: "The web's scaffolding tool for modern web apps". Put simply, it automates web application project creation in accordance with industry best practices. Grunt is then used as the means in which to automate as much as possible the build of your project. Finally, Bower is used to provide web package management. Read more about Yeoman on the Yeoman.io home page.
+<h2>And finally</h2>
+<a title="generator-angular-require on GitHub" href="https://github.com/aaronallport/generator-angular-require">Check out the project on GitHub</a> (where incidentally you can <a title="Issues - generator-angular-require on GitHub" href="https://github.com/aaronallport/generator-angular-require/issues">raise issues or enhancement requests</a>). I'm happy to answer questions on GitHub or by email. There's also <a title="generator-angular-require on NPM" href="https://npmjs.org/package/generator-angular-require">the project page on NPM</a> for those you are interested.

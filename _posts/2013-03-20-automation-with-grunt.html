@@ -1,0 +1,82 @@
+---
+layout: post
+title: Automation with Grunt
+categories:
+- JavaScript
+- Tooling
+tags:
+- automation
+- grunt
+- tooling
+- useful
+status: publish
+type: post
+published: true
+meta:
+  _edit_last: '1'
+  _wpas_done_all: '1'
+---
+This week I've been getting into a fantastic automation tool called <a title="Grunt" href="http://gruntjs.com" target="_blank">Grunt</a>. As a front-end developer, I often have to perform a number of tasks around my normal workflow, usually falling in to the areas of code quality and performance. Using grunt to automate these tasks has been fantastic.
+<h2>What is Grunt?</h2>
+Put simply, Grunt is a JavaScript task runner. It uses JavaScript for task configuration, and once a task is written, it can simply be called on the command-line or automated as part of a continuous integration system such as Jenkins for build and test automation.
+<h2>How to get started with Grunt</h2>
+Grunt uses node.js, with all packages available via <a title="Node Packaged Modules" href="https://npmjs.org/" target="_blank">npm</a>. Therefore the first task is to install node.js, available from <a title="Node.js" href="http://www.nodejs.org" target="_blank">http://www.nodejs.org</a>
+
+Next up, open a command window, navigate to where you'd like to run Grunt from (typically a project directory) and type the following to install Grunt:
+<code>npm install grunt</code>
+Next up, we need to configure two files: package.json and Gruntfile.js
+
+Open your preferred text editor and type the following:
+<code>{
+ "name": "wluk-ui",
+ "version": "0.1.0"
+}</code>
+Save this file as "package.json" in the directory from which you ran the Grunt install command earlier. Next up, we have to create the Grunt configuration file. Create a new file in your preferred text editor and put in the following contents:
+<code>module.exports = function(grunt) {
+ grunt.initConfig({
+ // Project settings
+ pkg: grunt.file.readJSON("package.json"),
+ });
+};</code>
+Save this file as "Gruntfile.js" in the same directory as package.json created earlier. Once that's done, we're ready to configure our first Grunt task. For the purposes of this example, we'll set up CSS linting.
+
+Install the CSS Lint Grunt package using your command window from earlier. Type the following to install the csslint package:
+<code>npm install grunt-contrib-csslint --save-dev</code>
+This installs the CSS Lint Grunt plugin and also updates the package.json file to account for this dependency. The final part of Grunt task configuration is to put an entry for this task in to the Grunt file. Open "Gruntfile.js" in your preferred text editor, and insert the following code after the line containing "readJSON":
+<code> // CSSLint. Tests CSS code quality
+ // https://github.com/gruntjs/grunt-contrib-csslint
+ csslint: {
+  // define the files to lint
+  files: ["css\\**\\*.css"],
+  strict: {
+   options: {
+    "import": 2
+   }
+  }
+ }</code>
+Next, we have to instruct Grunt to load the plugin, which involves adding the following line of code to the end fo the file, just before the closing brace (i.e. add this to the second from last line of Gruntfile.js):
+<code>grunt.loadNpmTasks("grunt-contrib-csslint");</code>
+Gruntfile.js should now look like so:
+<code>module.exports = function(grunt) {
+ grunt.initConfig({
+ // Project settings
+ pkg: grunt.file.readJSON("package.json"),
+ // CSSLint. Tests CSS code quality
+ // https://github.com/gruntjs/grunt-contrib-csslint
+ csslint: {
+  // define the files to lint
+  files: ["css\\**\\*.css"],
+  strict: {
+   options: {
+    "import": 2
+   }
+  }
+ }
+ });
+ grunt.loadNpmTasks("grunt-contrib-csslint");
+};</code>
+Finally, we can run our Grunt task to lint our CSS files, like so in a command window:
+<code>grunt csslint</code>
+This will lint all CSS files within the "css" and all sub-directories of the "css" directory. More information can be found on the CSS Lint plugin at <a title="CSS Lint Grunt plugin on Github" href="https://github.com/gruntjs/grunt-contrib-csslint" target="_blank">https://github.com/gruntjs/grunt-contrib-csslint</a>
+
+With CSS Linting sorted, I encourage you to explore the <a title="Grunt Plugins Directory" href="http://gruntjs.com/plugins" target="_blank">Grunt plugins directory</a> and get cracking with your own automated workflow and enhance your productivity!

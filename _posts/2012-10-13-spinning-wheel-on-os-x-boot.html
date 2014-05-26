@@ -1,0 +1,21 @@
+---
+layout: post
+title: Spinning wheel on OS X boot
+categories:
+- personal
+tags:
+- mac
+- os x
+status: publish
+type: post
+published: true
+meta:
+  _edit_last: '1'
+---
+Last night I came home to my usual ritual of checking emails and the like. As I do every evening, I sat down and pressed the power button on the back of my iMac and waited for it to boot up. After a couple of minutes it was still loading (I say loading, but I mean the little wheel was spinning indicating that it was starting up... ...still). I powered down and booted into my recovery partition using the option key (hold it down when you hear the startup chime).
+
+Booting into recovery and trying to do a verify disk revealed that my master Macintosh partition was screwed. Whilst I accept that from time to time these things happen, I was annoyed as <a title="Re-installing OS X to put the roar back in my iMac - Aaron Allport's Blog" href="http://www.aaronallport.com/?p=53" target="_blank">I'd only recently gone through the painstaking full reinstall of my iMac</a>.
+
+I checked that my Bootcamp partition that I use for Windows-based development work was ok, and it was. I therefore bit the bullet and decided to restore from a time machine backup I'd taken the previous day. This involved booting into the recovery partition and using disk utility to delete the main Macintosh partition on my hard drive (make sure to format as Max OS X Entended, Journaled). Once that was done I chose the option to restore from a time machine backup to my recently erased Macintosh partition.
+
+An hour or so later and we're back online. The iMac may be over 5 years old now, but I'm determined to keep her running for as long as possible!

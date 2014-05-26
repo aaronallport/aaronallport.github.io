@@ -1,0 +1,152 @@
+---
+layout: post
+title: A mixin and SASS structure for simple media query support
+categories: []
+tags: []
+status: publish
+type: post
+published: true
+meta:
+  _edit_last: '1'
+  _wpas_done_all: '1'
+---
+<h1>It started with a bit of inspiration...</h1>
+
+Following both attendance of the excellant <a title="RWD Summit" href="http://environmentsforhumans.com/2013/responsive-web-design-summit/" target="_blank">RWD summit</a> and reading about the <a title="SASS media query mixin by Always Twisted" href="http://alwaystwisted.com/post.php?s=2013-04-01-my-media-query-mixin">SASS media query mixin by Always Twisted</a>, I decided to re-think my project SASS structure going forward. Check this baby out:
+
+<code>
+@mixin media-query-bp($unit, $query1: min, $query2: width, $target: "") {
+// Check if breakpoints are in use
+$mqtarget: "";
+@if $media-queries-supported == true {
+@if $target != "" {
+@media #{$target} and (#{$query1}-#{$query2}: #{$unit}) {
+@content;
+}
+}
+@else {
+@media (#{$query1}-#{$query2}: #{$unit}) {
+@content;
+}
+}
+}
+@else {
+.no-mq {
+@content;
+}
+}
+}
+</code>
+
+This modified version of the aforementioned media query mixin allows for an optional "target" to be set (screen, tv, handheld, etc). Default is assumed to be no target (same as writing "all"). This media query mixin can be called in the following way:
+
+<code>
+@include media-query-bp(30em) {
+body {
+background-color: #fff;
+}
+}
+</code>
+
+This results in the following:
+
+<code> @media (min-width: 30em) {
+body {
+background-color: #fff;
+}
+}
+</code>
+
+OR the following:
+
+<code> .no-mq
+{
+body {
+background-color: #fff;
+}
+}
+</code>
+
+<h2>What is $media-queries-supported all about?</h2>
+
+Put simply, it is a variable set before the mixins are imported to denote whether media queries should be output or not. By using this simple variable defined once in each of "mq.scss" and "no-mq.scss", whenever the mixin is called, differing output can be generated to each of the resulting "mq.css" and "no-mq.css", meaning we can target browsers that do not support media queries effectively, without all of the media query CSS being loaded first (which won't even be used. What a waste of bandwidth, time and most likely, someones data allowance!)
+
+<h3>Additional arguments to the mixin</h3>
+
+
+The media query mixin may be called with additional (although totally optional) arguments. These are:
+<ul>
+	<li>$query1 : First part of a parameter declaration (as in the "min" part of min-width). "min" is assumed to be the default and will be used should no value be specified.</li>
+	<li>$query2 : Second part of a parameter (as in the "width" part of min-width). "min" is assumed to be the default and will be used should no value be specified.</li>
+	<li>$target : Device to target, such as "handheld". "All" is assumed should nothing be specified (this results in no output, as "all" and no device are assumed to be the same thing according to the spec).</li>
+</ul>
+
+<h3>Additional usage example</h3>
+
+<code>
+@include media-query-bp(420px, max, height, screen) {
+body {
+background-color: #fff;
+}
+}
+</code>
+
+This results in the following:
+
+<code>
+@media screen and (max-height: 420px) {
+body {
+background-color: #fff;
+}
+}
+</code>
+
+<h2>Organising your SASS files for minimal maintenance</h2>
+&nbsp;
+
+Next up is a way to arrange SASS project files to minimise the amount of maintenance needed as time moves on. By importing all of your SASS using an "_import.scss partial", we can create two top-level SASS project files, namely "mq.scss" and "no-mq.scss". Both files contain two lines, as per the examples below:
+
+mq.scss:
+
+<code>
+$media-queries-supported: true;
+@import "imports";
+</code>
+
+no-mq.scss:
+
+<code>
+$media-queries-supported: true;
+@import "imports";
+</code>
+
+_imports.scss looks like so:
+
+<code>
+// Import variables
+@import "variables";
+// Import mixins
+@import "partials/mixins";
+// Import reset:
+@import "partials/reset";
+// Import everything else
+@import "partials/typography";
+@import "partials/colour";
+@import "partials/layout";
+</code>
+
+Lastly, using IE conditional comments, we can add a "no-mq" class on our html element like so:
+
+<code>
+&lt;!--[if lt IE 9]&gt;&lt;!--&gt;&lt;html class="no-mq" lang="en"&gt;&lt;!--&lt;![endif]--&gt;</code>
+
+<h2>Additional tip to save bandwidth</h2>
+
+Using a slightly different conditional comment hack as above, we can ensure that we only serve one stylesheet depending on the version of IE, again utilising IE conditional comments:
+
+<code>
+&lt;!--[if lt IE 9]&gt; &lt;link rel="stylesheet" href="css/no-mq.css"&gt;&lt;![endif]--&gt;
+&lt;!--[if gte IE 9]&gt;&lt;!--&gt;&lt;link rel="stylesheet" href="css/mq.css" /&gt;&lt;!--&lt;![endif]--&gt;
+</code>
+
+The first line will only ever be interpreted by IE 8 and below. The second line will be interpreted by IE9 and every other browser. Sure, it's a conditional comment hack, but surely one less HTTP request in today's device-agnostic web can only be a good thing?
