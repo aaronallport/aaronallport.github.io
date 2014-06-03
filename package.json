@@ -1,0 +1,19 @@
+{
+  "name": "aaronallport.com",
+  "version": "0.1.0",
+  "description": "Aaron Allport's website",
+  "author": "Aaron Allport",
+  "devDependencies": {
+    "grunt": "~0.4.5",
+    "grunt-autoprefixer": "^0.7.3",
+    "grunt-contrib-clean": "^0.5.0",
+    "grunt-contrib-cssmin": "^0.9.0",
+    "grunt-contrib-sass": "^0.7.3",
+    "grunt-contrib-watch": "^0.6.1",
+    "grunt-phantomas": "^0.7.1",
+    "grunt-scss-lint": "^0.1.9",
+    "grunt-yslow": "0.0.3",
+    "load-grunt-tasks": "^0.4.0",
+    "time-grunt": "^0.3.1"
+  }
+}

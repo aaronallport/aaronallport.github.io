@@ -29,6 +29,7 @@ My blog used to be on [WordPress](http://wordpress.org), which I still regard as
 Before exporting a site and importing to GitHub Pages, it is always a good idea to plan out the series of steps that need to take place and ensure that anything your blog depends on (such as a custom domain name), are in place or at least editable.
 
 Here's what needs to be in place before we can begin:
+
 * Ensure domain name DNS entries can be edited - if you've lost that password or want to move domain registrars (like I did), now is the time to sort that out. You'll need to be edit the "A" and "CNAME" records.
 * Have an export of your existing site data ready. Keep this somewhere safe, but accessible. There are plenty of tutorials on how to do this, so I won't explain here.
 * [Create a personal or organisation repository](https://github.com/new) on GitHub (depending on the type of blog you're moving). This is very simple to do. Simply go to your homepage on GitHub and create a repository called <username>.github.io (where <username> is the your GitHub username or organisation username on GitHub).
@@ -38,6 +39,7 @@ Here's what needs to be in place before we can begin:
 * Install the Jekyll importer ruby gem: type `gem install jekyll-import` in a command prompt or terminal window (admin access may be required).
 
 Quite a list, but now the fun begins. Perform the following to import your blog to GitHub Pages:
+
 * Navigate to the repository you cloned to your system in a terminal window or command prompt.
 * Type the following command to create a new Jekyll site: `jekyll new`. Hit return.
 * Run the following command to import your previous blog data (remember I'm doing this as a WordPress import): `ruby -rubygems -e 'require "jekyll-import"; JekyllImport::Importers::WordpressDotCom.run({ "source" => "<path_to_export_file>.xml" })'`. Hit return.

@@ -1,0 +1,34 @@
+//
+// Individual post styling
+//
+
+.post pre {
+    background-color: #eef;
+    border: 1px solid #ddd;
+    padding: 0 .4em;
+
+    code {
+        border: 0;
+    }
+
+    &.terminal {
+        background-color: #333;
+        border: 1px solid #000;
+        color: #fff;
+
+        code {
+            background-color: #333;
+        }
+    }
+}
+
+.post ul,
+.post ol {
+    margin-left: 1.35em;
+}
+
+.post code {
+    background-color: #eef;
+    border: 1px solid #ddd;
+    padding: 0 .2em;
+}

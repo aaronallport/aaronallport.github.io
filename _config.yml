@@ -1,3 +1,4 @@
 name: aaronallport.com
 markdown: redcarpet
 pygments: true
+exclude: [metrics, node_modules, scss, Gruntfile.js, package.json, README.md, .scss-lint.yml]

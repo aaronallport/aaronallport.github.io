@@ -1,0 +1,32 @@
+//
+// Base typography styles
+//
+
+body {
+    font: 13.34px $helvetica;
+    font-size: small;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-size: 100%;
+}
+
+.site {
+    font-size: 115%;
+    line-height: 1.5em;
+    text-align: justify;
+}
+
+.header a {
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.footer {
+    font-size: 80%;
+}
