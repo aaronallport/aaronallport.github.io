@@ -65,7 +65,9 @@ DNS changes take a while to propagate (mine took about 4 hours or so).
 ## I've hit an issue
 
 My best advice is to check out the GitHub documentation, found at: [https://help.github.com/articles/using-jekyll-with-pages](https://help.github.com/articles/using-jekyll-with-pages)
+
 Custom domain instructions are found at [https://help.github.com/articles/setting-up-a-custom-domain-with-github-pages](https://help.github.com/articles/setting-up-a-custom-domain-with-github-pages)
+
 Also, there is a good article on the DNS side of things at: [http://donalfarrell.com/2012/07/13/Setting-up-GitHub-redirects.html](http://donalfarrell.com/2012/07/13/Setting-up-GitHub-redirects.html)
 
 ## A free blog
