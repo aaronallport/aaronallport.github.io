@@ -57,7 +57,7 @@ You now have a GitHub Pages site. It can take up to 10 minutes to generate, and 
 
 This one is easy. Navigate to the control panel for your domain name you wish to use (and you'll have specified in the `CNAME` file created earlier).
 
-* Create two "A" records, both called "*" and for the address fields, use the two IP addresses found at: TODO!!
+* Create two "A" records, both called "*" and for the address fields, use the two IP addresses found at: [Configuring an A record with your DNS provider](https://help.github.com/articles/tips-for-configuring-an-a-record-with-your-dns-provider#configuring-an-a-record-with-your-dns-provider)
 * If you are using a "www" subdomain, or wish to support one, create two "A" records, both called "www", and use the same IP adresses as above. Also, create a CNAME record called "www" and for the address, use <username>.github.io
 
 DNS changes take a while to propagate (mine took about 4 hours or so).
