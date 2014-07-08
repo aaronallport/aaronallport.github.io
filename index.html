@@ -3,11 +3,10 @@ layout: default
 title: aaronallport.com
 ---
 
-<div id="home">
-  <h1>Blog Posts</h1>
-  <ul class="posts">
+<main rol="main">
+  <ul class="post-list">
     {% for post in site.posts %}
-      <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
+      <li class="post-list--item"><span>{{ post.date | date_to_string }}</span><a class="post-list--item__link" href="{{ post.url }}">{{ post.title }}</a></li>
     {% endfor %}
   </ul>
-</div>
+</main>

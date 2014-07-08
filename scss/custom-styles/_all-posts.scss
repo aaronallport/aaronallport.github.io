@@ -2,18 +2,19 @@
 // Styles for the "all posts" view (home page)
 //
 
-.posts {
+.post-list {
     list-style-type: none;
-    margin-bottom: 2em;
+}
 
+.post-list--item {
+    margin-bottom: $gutter;
+}
 
-    li {
-        line-height: 1.75em;
-    }
+.post-list--item:last-child {
+    margin-bottom: 0;
+}
 
-    span {
-        color: #aaa;
-        font-family: Monaco, "Courier New", monospace;
-        font-size: 80%;
-    }
+.post-list--item__link {
+    display: block;
+    font-size: 1.75em;
 }

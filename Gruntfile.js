@@ -103,7 +103,7 @@ module.exports = function (grunt) {
 
         // Watch for changes to SCSS files and re-build as necessary
         watch: {
-            files: ["<&= scsslint.files %>"],
+            files: ["scss/**/*.scss"],
             tasks: ["css"]
         },
 

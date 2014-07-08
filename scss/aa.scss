@@ -1,19 +1,16 @@
 // Import frameworks
-@import "vendor/bourbon/bourbon";
-@import "vendor/neat/neat";
-@import "vendor/bitters/base";
+@import "bourbon/bourbon";
+@import "neat/neat";
 
-// Import configuration
-@import "config/base-config";
+// Import bourbon bitters (scaffolding for base styles)
+@import "base/base";
 
-// Normalise for a consistentbase
+// Normalise for a consistent base
 @import "helpers/normalise";
 
-// Import base styles
-@import "base-styles/colour";
-@import "base-styles/layout";
-@import "base-styles/typography";
-
 // Import custom styles
+@import "custom-styles/layout";
+@import "custom-styles/colour";
+@import "custom-styles/typography";
 @import "custom-styles/all-posts";
 @import "custom-styles/single-post";

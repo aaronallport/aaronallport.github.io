@@ -2,9 +2,12 @@
 // Individual post styling
 //
 
+.meta {
+    margin-top: $gutter/2;
+}
+
 .post pre {
     background-color: #eef;
-    border: 1px solid #ddd;
     padding: 0 .4em;
 
     code {
@@ -22,13 +25,33 @@
     }
 }
 
-.post ul,
-.post ol {
-    margin-left: 1.35em;
-}
-
 .post code {
     background-color: #eef;
-    border: 1px solid #ddd;
     padding: 0 .2em;
+}
+
+// Custom styles here
+.post h2 {
+    font-weight: normal;
+    margin-bottom: $gutter/2;
+    margin-top: $gutter;
+}
+
+.post h2:first-child {
+    margin-top: $gutter/2;
+}
+
+.post h3 {
+    font-weight: normal;
+    margin-bottom: $gutter/2;
+    margin-top: $gutter;
+}
+
+.post p {
+    margin-bottom: $gutter;
+}
+
+.post li {
+    list-style-type: disc;
+    margin-bottom: $gutter/2;
 }

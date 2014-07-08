@@ -1,40 +1,22 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>{{ page.title }}</title>
-        <meta name="viewport" content="width=device-width">
+<html lang="en">
 
-        <!-- CSS -->
-        <link rel="stylesheet" href="/css/aa.min.css">
-    </head>
+    {% include head.html %}
+
     <body>
-        <div class="site">
-          <div class="header">
-            <h1 class="title"><a href="/">{{ site.name }}</a></h1>
-            <a class="extra" href="/">home</a>
-          </div>
+        <header role="banner">
+            <h1><a href="/">Aaron Allport</a></h1>
+        </header>
 
-          {{ content }}
+        <div class="content-wrapper">
+            {{ content }}
 
-          <div class="footer">
-            <div class="contact">
-              <p>
-                Aaron Allport<br />
-                Web Developer
-              </p>
-            </div>
-            <div class="contact">
-              <p>
-                <a href="https://github.com/aaronallport">github.com/aaronallport</a><br />
-                <a href="https://twitter.com/aaronallport">twitter.com/aaronallport</a><br />
-              </p>
-            </div>
-          </div>
+            {% include aside.html %}
         </div>
 
-        <!-- Google Analytics -->
+        {% include footer.html %}
+
+        <!-- Google Analytics
         <script>
             (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
             (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -44,5 +26,6 @@
             ga('create', 'UA-29795392-1', 'aaronallport.com');
             ga('send', 'pageview');
         </script>
+        -->
     </body>
 </html>

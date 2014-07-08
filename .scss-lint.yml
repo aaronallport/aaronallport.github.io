@@ -1,5 +1,5 @@
 # Default application configuration that all configurations inherit from.
-exclude: 'scss/vendor/**'
+exclude: ['scss/bourbon/**', 'scss/neat/**', 'scss/base/**']
 
 linters:
   BorderZero:
