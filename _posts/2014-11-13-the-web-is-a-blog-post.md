@@ -394,7 +394,7 @@ When asking about who we are, we answer as humans who have experiences unique to
 
 Brad's final points pretty much sum up what all of us need to be doing, and doing more:
 
-* Word hard
+* Work hard
 * Share what you know
 * Don't be an asshole
 
