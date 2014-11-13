@@ -1,8 +1,7 @@
 ---
 layout: post
 title: The Web Is... A Blog Post
-categories:
-- Conferences
+categories: []
 tags: []
 status: published
 type: post
