@@ -257,7 +257,7 @@ Scott then went on to speak about the 3 types of applications:
 * Control (such as the [Nest](https://store.nest.com/uk/?gclid=CMPh67ye-MECFSrHtAod70MADw) application, and [Hive](https://www.hivehome.com/?gclid=CIH28rue-MECFcfMtAodoQUAnQ&gclsrc=aw.ds) for those of us in the UK)
 * Discovery (apps that are loose, small, and discover you) - these can be driven from inexpensive chips such as an [Arduino](http://arduino.cc/) with [GSM capabilities](http://arduino.cc/en/Main/ArduinoGSMShield), on a cheap [Sigfox](http://www.sigfox.com/en/) data plan
 
-Attendees were given a small Physical Web beacon to go away and hack with - I intend to write about this in a future post. More information on the physical web project can be found at (physical-web.org)[https://google.github.io/physical-web/]
+Attendees were given a small Physical Web beacon to go away and hack with - I intend to write about this in a future post. More information on the physical web project can be found at [physical-web.org](https://google.github.io/physical-web/)
 
 ### The Web Is Still Young
 
