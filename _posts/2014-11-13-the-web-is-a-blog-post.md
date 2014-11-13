@@ -23,9 +23,10 @@ Presented by Chris Murphy (Twitter: [@fehler](//twitter.com/fehler))
 
 Starting the day was a talk on how teaching can be used to great effect on the web. Starting with an emotional excerpt from the film [The Dead Poets Society](http://www.imdb.com/title/tt0097165/), two distinct teaching styles were examined and the emotional attachment to them for the pupils. In the clip, a new teacher has taken over a class from the character portrayed by the late [Robin Williams](http://en.wikipedia.org/wiki/Robin_Williams). This new teacher is referred to as "Sir" by the class due to the text-book, non-emotional attachement to him or his teaching method. The character portrayed by Robin Williams teaches throughout the film in such a styles as to have the class emotionally attached to the teachings of poetry. The scene depicts his character entering the class room to pick up some of his things and the subsequent declaration of nearly the whole class one-by-one standing on their desks shouting ["Oh Captain! My Captain!"](http://en.wikipedia.org/wiki/O_Captain!_My_Captain!), begging him not to leave. Such is the emotional attachment when people are educated to believe in something, believe in themselves.
 
-<iframe title="YouTube video player" width="480" height="390" src="http://www.youtube.com/watch?v=vdXhWS7lLvs" frameborder="0" allowfullscreen></iframe>
+<iframe width="420" height="315" src="//www.youtube.com/embed/vdXhWS7lLvs" frameborder="0" allowfullscreen></iframe>
 
 Next up before the main body of the talk was the introduction of three books related to self-education, specifically being able to manage yourself and encourage self belief. These books are:
+
 * [The Element](http://www.amazon.co.uk/The-Element-Finding-Passion-Everything/dp/0141045256) - Ken Robinson
 * [Mastery](http://www.amazon.co.uk/Mastery-Robert-Greene/dp/178125091X/ref=sr_1_1?s=books&ie=UTF8&qid=1415826988&sr=1-1&keywords=mastery) - Robert Greene
 * [Managing Oneself](http://www.amazon.co.uk/Managing-Oneself-Harvard-Business-Classics/dp/142212312X/ref=sr_1_1?s=books&ie=UTF8&qid=1415827032&sr=1-1&keywords=managing+oneself) - Peter F. Drucker
@@ -87,10 +88,10 @@ Nathan then went into some pointers on the [Responsive Web Design](http://en.wik
     * [vw](http://www.w3.org/TR/css3-values/#vw-unit) (viewport width) and [vh](http://www.w3.org/TR/css3-values/#vh-unit) (viewport height) for headlines and page formatting
     * [px](http://www.w3.org/TR/css3-values/#absolute-lengths) (pixels) for media queries (although I personally use [em's](http://www.w3.org/TR/css3-values/#em-unit) for this)
     * em's and [ex's](http://www.w3.org/TR/css3-values/#ex-unit) for type and max-widths
-
-Big is beautiful too!
+* Big is beautiful too!
 
 Resources:
+
 * [Deriving layout from your typeface](http://blog.typekit.com/2014/02/26/deriving-layout-from-your-typeface/)
 * [Gridset 2013 report](http://2013.report.gridsetapp.com)
 
