@@ -1,8 +1,10 @@
 // Typography
-$sans-serif: $helvetica;
+$sans-serif: "Roboto", $helvetica;
 $serif: $georgia;
 $base-font-family: $sans-serif;
 $header-font-family: $base-font-family;
+$base-font-weight: 400;
+$heading-font-weight: 700;
 
 // Sizes
 $base-font-size: 1em;
