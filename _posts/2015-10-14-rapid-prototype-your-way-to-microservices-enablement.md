@@ -1,3 +1,15 @@
+---
+layout: post
+title: Rapid Prototype your way to Microservices Enablement
+categories: []
+tags: []
+status: published
+type: post
+published: true
+meta:
+  _edit_last: '1'
+---
+
 # Rapid Prototype your way to Microservices Enablement
 
 > Use task automation and the modern web to break open your monolith to the masses.
