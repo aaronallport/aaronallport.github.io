@@ -10,8 +10,6 @@ meta:
   _edit_last: '1'
 ---
 
-# Rapid Prototype your way to Microservices Enablement
-
 > Use task automation and the modern web to break open your monolith to the masses.
 
 Middleware and back end systems are often the life-blood of any business. They are where all of your business processes, data and the other bits of your “secret sauce” reside. An API, or set of microservices, is seen as a basic requirement of today’s enterprise software packages, especially as more and more of the software we integrate our applications and systems with resides in the cloud.
