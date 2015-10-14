@@ -45,12 +45,14 @@ Typically, this activity involves documenting the business processes and service
 ## Organise microservices into logical groups
 
 When sifting through your microservice “catalogue”, some themes or logical groupings will naturally present themselves. For example the following may all be grouped together as “customer” operations:
+
 * retrieving customer details
 * adding a customer
 * removing a customer
 * editing a customer
 
 An online groceries site may have several related “basket” microservices such as:
+
 * Add item
 * Remove item
 * Edit item quantity
@@ -63,6 +65,7 @@ In Software Engineering, the facade is a design pattern. Analogous to an archite
 ## Make it happen
 
 There are generally 3 key pieces of technology that need to be in place to facilitate the exposure of microservices:
+
 * Web server, to be the “gateway” between processing logic and the outside world.
 * Logic to handle calls to a specific endpoint, mapping that to one or more network, back-end system or middleware calls.
 * The back end systems themselves
