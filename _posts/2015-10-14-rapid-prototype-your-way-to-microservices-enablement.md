@@ -51,6 +51,7 @@ When sifting through your microservice “catalogue”, some themes or logical g
 * removing a customer
 * editing a customer
 
+
 An online groceries site may have several related “basket” microservices such as:
 
 * Add item
