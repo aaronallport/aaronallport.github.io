@@ -51,6 +51,7 @@ When sifting through your microservice “catalogue”, some themes or logical g
 * removing a customer
 * editing a customer
 
+<br />
 
 An online groceries site may have several related “basket” microservices such as:
 
@@ -75,4 +76,4 @@ There are generally 3 key pieces of technology that need to be in place to facil
 
 Leveraging the technologies of the modern web - JavaScript and HTML in particular - we’ve been able to create a free, open source repository that allows for expedited microservices enablement, exposing services by means of a simple web server and the generation of the API, or microservices catalogue. By generating the boilerplate code and subsequent web server wiring, developers are free to work on the integration with their back-end or middleware services.
 
-Get the code and instructions on how to set up at the [Slalom Microservices Enablement repository on github](https://github.com/aaronallport/generator-microservice-catalog). Follow the instructions at the repository to get set up and generating microservices in no time.
+Get the code and instructions on how to set up at the [Slalom Microservices Enablement repository on github](https://github.com/SlalomConsulting/generator-microservice-catalog). Follow the instructions at the repository to get set up and generating microservices in no time.
