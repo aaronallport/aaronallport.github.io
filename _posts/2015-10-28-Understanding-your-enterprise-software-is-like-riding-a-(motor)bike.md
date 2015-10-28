@@ -38,10 +38,16 @@ Of course, there are several stages to [being able to ride a 900cc motorcycle](h
 
 The trouble with enterprise software is that companies who have these large implementations without taking the time to understand their capabilities, tend to get no further than the CBT stage. This means that large [Salesforce](http://www.salesforce.com/) implementation is used for a tiny amount of functionality, or in the case of my previous employer, a fear of altering whats there due to lack of understanding. The irony is, these things only ends up costing more money in the long-term.
 
+So, to break down enterprise software, functional areas that can be exploited to gain business benefit should be tackled in a logical order. CRM systems for example require organisation structure, account record management and the like. This could translate into the following functional areas for understanding and mastery:
+
+* Organisation structure and hierarchy
+* Permissions model (who should have access to what, and what should they be able to do?)
+* Basic reporting and dashboard creation to provide basic management information on those records created
+
 ## Enterprise software understanding FTW!
 
 When software is understood well and folks have the full "A" license in terms of their competency, companies can really use their software to its fullest potential. Much like my learning to ride a motorcycle, folks typically attend structured modules or training on particular software functions.
 
-An example of this would be Salesforce. There are CRM concepts, organisation and hierarchy, workflows, Apex, VisualForce pages, the Lightening Design System, and a whole heap of "under the hood" functionality. The key is to break down the features and tackle them in order of importance for  business needs, meaning business benefit can be realised and built upon over time.
+An example of this would be Salesforce. There are CRM concepts, organisation and hierarchy, workflows, Apex, VisualForce pages, the Lightening Design System, and a whole heap of "under the hood" functionality. The key is to break down the features and tackle them in order of importance for business needs, meaning business benefit can be realised and built upon over time.
 
 In short, invest now before it costs you more money in the long run, "supporting" a system that you can't utilise to the fullest.
