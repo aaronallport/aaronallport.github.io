@@ -28,7 +28,7 @@ I could go into explaining how the bike being belt-driven makes for a smoother r
 
 ## Breaking it down
 
-Of course, there are several stages to [being able to ride a 900cc motorcycle](https://www.gov.uk/ride-motorcycle-moped/bike-categories-ages-and-licence-requirements) (I'm based in the UK, so can only attest to the UK requirements):
+Just like being competent to get the most from a large scale piece of enterprise software, I find myself having to break down the challenge of riding my motorcycle in to several stages so that I am [able to ride a 900cc motorcycle](https://www.gov.uk/ride-motorcycle-moped/bike-categories-ages-and-licence-requirements) (I'm based in the UK, so can only attest to the UK requirements):
 
 * [Obtain provisional motorcycle license](https://www.gov.uk/apply-first-provisional-driving-licence)
 * [Compulsory Basic Training](https://www.gov.uk/cbt-compulsory-basic-training) or CBT (this lets you ride on the road, with "L" plates, on a machine no bigger than 125cc)
