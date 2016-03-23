@@ -19,6 +19,7 @@ Freedom and choice is a good thing. After all, it is what drives the competition
 ## Am I locked in to a particular vendor?
 
 To establish if you are locked-in to your current cloud provider, ask yourself the following questions:
+
 * Can I move my business logic easily and independently of the API or micro-services layer from which users interact with my application, with minimal configuration changes to my application?
 * Can I move my ENTIRE data layer independently of my business logic layer, with minimal configuration changes to my application?
 * Can I move any or all parts of my application from one cloud provider to another (and even back again), from a single command?
