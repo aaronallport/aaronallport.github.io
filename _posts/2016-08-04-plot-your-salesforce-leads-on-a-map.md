@@ -166,7 +166,7 @@ Use the following code for the Helper:
 ```js
 ({
     // Calculate the Haversine Distance between a pair of lat/long co-ordinates.
-    // See [What formulae does the Geolocation Distance use?](http://salesforce.stackexchange.com/questions/32585/what-formulae-does-the-geolocation-distance-use) for more information
+    // See "What formulae does the Geolocation Distance" at http://salesforce.stackexchange.com/questions/32585/what-formulae-does-the-geolocation-distance-use for more information
     calculateHaversineDistance: function(lat1, lon1, lat2, lon2) {
         // Earth's radius varies from 6356.752 km at the poles to 6378.137 km at the equator
     	var radius = 6371.00;
