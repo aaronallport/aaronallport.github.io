@@ -28,7 +28,7 @@ Add to the page layout in the standard manner. When done, populate a latitude an
 ## Create the Server-side controller class to retrieve current user and lead information
 
 Next, open the developer console and create a new Apex Class. Call it "LeadVisualiserSSController". Change the class definition to this:
-```Java
+```java
 public with sharing class LeadVisualiserSSController {
 	@AuraEnabled
     public static List<Lead> getLeads() {
