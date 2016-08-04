@@ -63,6 +63,7 @@ Follow the step entitled "Import Leaflet as a Static Resource" from [Creating a 
 ### Component
 
 The following code will define the component markup. This does a number of things:
+
 * Specifies the server-side controller
 * Creates an array to store lead information
 * Creates a User object definition

@@ -1,5 +1,6 @@
 name: aaronallport.com
-markdown: redcarpet
+kramdown:
+    input: GFM
 pygments: true
 exclude: [metrics, node_modules, scss, Gruntfile.js, package.json, README.md, .scss-lint.yml]
 gems:
