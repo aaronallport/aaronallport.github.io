@@ -31,7 +31,7 @@ Next, open the developer console and create a new Apex Class. Call it "LeadVisua
 
 ```java
 public with sharing class LeadVisualiserSSController {
-	@AuraEnabled
+    @AuraEnabled
     public static List<Lead> getLeads() {
         return [
             SELECT Id, Name, Latitude, Longitude
