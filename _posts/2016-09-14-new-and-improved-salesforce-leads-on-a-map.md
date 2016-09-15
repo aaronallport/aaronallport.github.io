@@ -164,3 +164,5 @@ Finally, load the component in Salesforce Lightning. From the App Launcher, sele
 ![Screenshot of the improved Lead Visualiser](/images/leads_on_map.jpg "Screenshot of the improved Lead Visualiser")
 
 With a few code modifications (and much slimming down), we're able to dramatically improve the experience!
+
+I've shared this code on Github also: [https://github.com/aaronallport/SFMapLeadsNearMe](https://github.com/aaronallport/SFMapLeadsNearMe)

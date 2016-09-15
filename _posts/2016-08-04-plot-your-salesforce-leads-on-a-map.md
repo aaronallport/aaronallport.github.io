@@ -10,6 +10,8 @@ meta:
 
 > Using the power of automatic geocoding, quickly and easily see your Salesforce leads on a map using location-aware data.
 
+> I've since written an update to this that includes a few code tweaks, code-slimming and additional functionality. See it at [http://aaronallport.com/2016/09/14/new-and-improved-salesforce-leads-on-a-map.html](http://aaronallport.com/2016/09/14/new-and-improved-salesforce-leads-on-a-map.html)
+
 With my first [Salesforce](https://www.salesforce.com/) blog post I thought I'd dive right in to a write-up and example of a feature in particular. As of the [Spring '16 release](http://www.salesforce.com/customer-resources/releases/spring16/) of Salesforce, standard address fields have had automatic geocoding applied to them. In this blog post, I'll show how to quickly and easily create a Lightning component (based heavily on: [Creating a Lightning Map Component](https://developer.salesforce.com/blogs/developer-relations/2015/04/creating-salesforce-lightning-map-component.html)) that plots leads on a map, calculating the distance to them when an individual lead is inspected. I've done all of this work in a Developer Edition environment, so I can vouch that it works! This blog post assumes familiarity with the lightning interface and the developer console.
 
 ## Re-visited: Creating a Lightning Map Component
