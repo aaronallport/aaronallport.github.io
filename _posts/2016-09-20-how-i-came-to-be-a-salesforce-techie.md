@@ -10,7 +10,9 @@ meta:
 
 > What I did to get to where I am, the resources I use, and what lies ahead.
 
-I'm now 18 months into Salesforce as a career path. What started out as a simple request from my boss at work to leverage my previous CRM experience and learn a little about [Salesforce](https://salesforce.com) quickly turned into me finding a new passion for my career as an IT professional.
+![My Salesforce dev book and glasses](/images/SF_dev_book_with_glasses.jpg "My Salesforce dev book and glasses")
+
+I'm now 18 months into Salesforce as a career path. What started out as a simple request from my boss at work to leverage my previous CRM experience and learn a little about [Salesforce](https://salesforce.com) quickly turned into me discovering a new passion for my career as an IT professional.
 
 ## Start with the basics
 
@@ -36,16 +38,16 @@ I am so, so happy I joined the developer community and have made myself known. I
 
 I have spoken here about the resources I use to learn about the Force.com platform. These are invaluable to my day-to-day learning.
 
-Books:
+### Books
 
 * [Force.com Platform Fundamentals](https://resources.docs.salesforce.com/sfdc/pdf/salesforce_creating_on_demand_apps.pdf)
 * [Apex workbook](https://resources.docs.salesforce.com/sfdc/pdf/apex_workbook.pdf)
 
-Developer community challenges:
+### Developer community challenges
 
 * [https://salesforcedevs.influitive.com](https://salesforcedevs.influitive.com)
 
-Blogs:
+### Blogs
 
 * [https://trailhead.salesforce.com/](https://trailhead.salesforce.com/) - the best learning platform I've ever used!
 * [http://exploiteddevorgs.com/](http://exploiteddevorgs.com/)
