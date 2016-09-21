@@ -55,7 +55,7 @@ public with sharing class LeadVisualiserSSController {
 
 ## Creating the Lead Visualiser component
 
-Create a Lightning component called "Lead Visualiser" from the developer console.
+Create a Lightning component called "LeadVisualiser" from the developer console.
 
 Next, we'll add the code for the component markup, controller, helper and styling.
 
