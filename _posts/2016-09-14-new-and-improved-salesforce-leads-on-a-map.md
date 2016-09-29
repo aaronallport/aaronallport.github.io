@@ -56,8 +56,7 @@ The controller code gets slimmed down now we're not querying for user details. H
 
 ```js
 ({
-    ({
-    mapLoaded: function(component, event, helper) {        
+    mapLoaded: function(component, event, helper) {
         var leadsAction = component.get("c.getLeads");
         var leads = {};
         var map = window.L.map("map", {zoomControl: true});
@@ -86,7 +85,7 @@ The controller code gets slimmed down now we're not querying for user details. H
 
                 var haversineDistance;
 
-                if (component.isValid() && state === "SUCCESS") {                    
+                if (component.isValid() && state === "SUCCESS") {
                     leads = response.getReturnValue();
                     component.set("v.leads", leads);
 
@@ -102,7 +101,7 @@ The controller code gets slimmed down now we're not querying for user details. H
 
                     var userPosition = L.marker([userLatLng.lat, userLatLng.lng], {icon: redIcon}).addTo(map);
 
-                    map.on("locationfound", function(e) {
+                    map.on('locationfound', function(e) {
                         userPosition.setLatLng(e.latlng);
                     });
                 }
