@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Dreamforce 2016: First time attending, first time speaking
+title: Dreamforce 2016. First time attending, first time speaking
 status: published
 type: post
 published: true
