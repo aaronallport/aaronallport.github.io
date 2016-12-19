@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 5 tips to go from Visualforce to \#Lightning
+title: 5 tips to go from Visualforce to &#35;Lightning
 status: published
 type: post
 published: true
