@@ -58,6 +58,7 @@ I have spoken here about the resources I use to learn about the Force.com platfo
 * [http://www.sfdc99.com/](http://www.sfdc99.com/)
 * [https://admin.salesforce.com/](https://admin.salesforce.com/)
 * [http://www.salesforceweek.ly/](http://www.salesforceweek.ly/)
+* [https://sfdc.co/b0hTzP](https://sfdc.co/b0hTzP) - The Salesforce Developer Career eBook
 
 ### Don't just read. Learn by doing!
 
