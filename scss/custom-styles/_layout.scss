@@ -15,21 +15,21 @@ header {
 main {
     @include clearfix;
 
-    margin-bottom: $gutter;
-
     @include media($large-screen) {
         @include span-columns(8);
     }
+
+    margin-bottom: $gutter;
 }
 
 aside {
     @include clearfix;
 
-    margin-bottom: $gutter;
-
     @include media($large-screen) {
         @include span-columns(4);
     }
+
+    margin-bottom: $gutter;
 }
 
 footer {
@@ -41,6 +41,6 @@ footer {
     @include clearfix;
     @include outer-container;
 
-    padding-left: $gutter/2;
-    padding-right: $gutter/2;
+    padding-left: $gutter / 2;
+    padding-right: $gutter / 2;
 }

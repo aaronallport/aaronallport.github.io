@@ -3,6 +3,13 @@ kramdown:
   input: GFM
 highlighter: rouge
 pygments: true
-exclude: [metrics, node_modules, scss, Gruntfile.js, package.json, README.md, .scss-lint.yml]
+exclude:
+  - node_modules
+  - scss
+  - Gruntfile.js
+  - gulpfile.js
+  - package.json
+  - README.md
+  - .scss-lint.yml
 gems:
   - jekyll-redirect-from

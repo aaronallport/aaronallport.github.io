@@ -3,53 +3,54 @@
 //
 
 .meta {
-    margin-top: $gutter/2;
+    margin-top: $gutter / 2;
 }
 
-.post pre {
-    background-color: #eef;
-    padding: 0 .4em;
-
-    code {
-        border: 0;
-    }
-
-    &.terminal {
-        background-color: #333;
-        border: 1px solid #000;
-        color: #fff;
+.post {
+    pre {
+        background-color: #eef;
+        padding: 0 .4em;
 
         code {
+            border: 0;
+        }
+
+        &.terminal {
             background-color: #333;
+            border: 1px solid #000;
+            color: #fff;
+
+            code {
+                background-color: #333;
+            }
         }
     }
-}
 
-.post code {
-    background-color: #eef;
-    padding: 0 .2em;
-}
+    code {
+        background-color: #eef;
+        padding: 0 .2em;
+    }
 
-// Custom styles here
-.post h2 {
-    margin-bottom: $gutter/2;
-    margin-top: $gutter;
-}
+    h2 {
+        margin-bottom: $gutter / 2;
+        margin-top: $gutter;
 
-.post h2:first-child {
-    margin-top: $gutter/2;
-}
+        &:first-child {
+            margin-top: $gutter / 2;
+        }
+    }
 
-.post h3 {
-    margin-bottom: $gutter/2;
-    margin-top: $gutter;
-}
+    h3 {
+        margin-bottom: $gutter / 2;
+        margin-top: $gutter;
+    }
 
-.post p {
-    margin-bottom: $gutter;
-}
+    p {
+        margin-bottom: $gutter;
+    }
 
-.post li {
-    list-style-type: disc;
-    margin-bottom: $gutter/2;
+    li {
+        list-style-type: disc;
+        margin-bottom: $gutter / 2;
+    }
 }
