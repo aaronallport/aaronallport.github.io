@@ -28,6 +28,10 @@ const tsFiles = 'ts/**/*.ts'
 gulp.task('css', () => {
     gulp.src(scssFiles)
         .pipe(sasslint({
+            options: {
+                formatter: 'stylish',
+                'merge-default-rules': false
+            },
             files: {
                 ignore: ['scss/bourbon/**/*.*', 'scss/neat/**/*.*', 'scss/base/**/*.*']
             },

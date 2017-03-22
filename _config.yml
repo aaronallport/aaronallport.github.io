@@ -1,8 +1,15 @@
+# Site settings
 name: aaronallport.com
+email: aaron@aaronallport.com
+description: "Virtual home of Aaron Allport, Salesforce Solution Principal from Colchester, UK."
+baseurl: ""
+url: "https://aaronallport.com"
+future: true
+
+# Build settings
 kramdown:
   input: GFM
 highlighter: rouge
-pygments: true
 exclude:
   - node_modules
   - scss
@@ -11,5 +18,9 @@ exclude:
   - package.json
   - README.md
   - .scss-lint.yml
+paginate: 10
+
+# Gems
 gems:
   - jekyll-redirect-from
+  - jekyll-paginate

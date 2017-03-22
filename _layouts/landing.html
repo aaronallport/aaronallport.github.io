@@ -4,17 +4,10 @@
     {% include head.html %}
 
     <body>
-        {% include page-header.html %}
+        {% include masthead.html %}
 
         <div class="content-wrapper">
-            <h2 class="post-title">{{ page.title }}</h2>
-            <p class="meta">{{ page.date | date_to_string }}</p>
-
-            <main role="main" class="post">
-
-                {{ content }}
-
-            </main>
+            {{ content }}
 
             {% include aside.html %}
         </div>
