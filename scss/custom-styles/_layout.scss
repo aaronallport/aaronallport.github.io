@@ -9,6 +9,7 @@ body {
 header {
     @include outer-container;
 
+    margin-bottom: $gutter;
     text-align: center;
 }
 
@@ -43,4 +44,14 @@ footer {
 
     padding-left: $gutter / 2;
     padding-right: $gutter / 2;
+}
+
+.image-placeholder {
+    text-align: center;
+    vertical-align: center;
+    margin-bottom: 2em;
+}
+
+.image-placeholder__me {
+    border-radius: 50%;
 }

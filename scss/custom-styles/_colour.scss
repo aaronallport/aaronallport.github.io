@@ -2,6 +2,10 @@
 // Colour
 //
 
+header {
+    border-bottom: 1px solid $light-gray;
+}
+
 footer {
     background-color: $dark-gray;
     color: $light-gray;
