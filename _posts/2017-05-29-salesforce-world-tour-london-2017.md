@@ -18,7 +18,7 @@ Salesforce recognise the skills shortage in the ecosystem, and to that end are i
 
 Continuing the theme of the customer being at the heart of every business, emphasis was put on the ways that Salesforce has invested in Artificial Intelligence and how this will be used to further break down the walls around whats possible.
 
-Teaming up with [IBM's Watson](https://www.ibm.com/watson/) technology, [Salesforce Einstein](https://www.salesforce.com/uk/products/einstein/overview/) and Watson together were demo'ed to show how an insurer can utilise weather forecasting and weather warnings along with previous customer engagements and notify customers (using their preferred and contact method) of a car insurance company to store their vehicles away when hail is imminent.
+Teaming up with [IBM's Watson](https://www.ibm.com/watson/) technology, [Salesforce Einstein](https://www.salesforce.com/uk/products/einstein/overview/) and Watson together were demo'ed to show how an insurer can utilise weather forecasting and weather warnings along with previous customer engagements and notify customers (using their preferred contact method) of a car insurance company to store their vehicles away when hail is imminent.
 
 Next, [Lightning](https://developer.salesforce.com/lightning), [Quip](https://quip.com), [Salesforce1](https://www.salesforce.com/uk/solutions/mobile/overview/) and [Thunder](https://www.salesforce.com/products/platform/products/thunder/) IoT cloud were all mentioned to address the speed at which apps can be built, teams made more productive, mobility is taken care of, and businesses can manage and monitor connected devices easily without any heavy lifting.
 
