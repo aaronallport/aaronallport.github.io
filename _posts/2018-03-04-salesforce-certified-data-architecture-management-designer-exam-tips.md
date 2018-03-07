@@ -24,7 +24,7 @@ The Salesforce-produced exam resource guide (found [here](http://certification.s
 
 ### Other useful guides and resources
 
-Here are some other documents (some of which are reference in the Resource Guide):
+Here are some other documents (some of which are referenced in the Resource Guide):
 * [Best Practices for Deployments
 with Large Data Volumes](http://resources.docs.salesforce.com/latest/latest/en-us/sfdc/pdf/salesforce_large_data_volumes_bp.pdf)
 * [Designing Record Access for
@@ -37,21 +37,18 @@ Optimization Cheat Sheet](http://resources.docs.salesforce.com/rel1/doc/en-us/st
 
 ### Data Quality
 
-Know what responsibilities fall under which area in the enterprise.
+Know what responsibilities fall under which area in the enterprise:
 
-#### Data Governance
+* Data Governance
+ * Definition of availability, usability, integrity and security of data. Typically a "counsel" that defines procedures and oversees their execution.
 
-Definition of availability, usability, integrity and security of data. Typically a "counsel" that defines procedures and oversees their execution.
+* Data Stewardship
+ * Manages quality of the data and data-driven assets, such as business intelligence and reporting.
 
-#### Data Stewardship
+* Data Architect
+ * The design, implementation and change management of the data model.
 
-Manages quality of the data and data-driven assets, such as business intelligence and reporting.
-
-#### Data Architect
-
-The design, implementation and change management of the data model.
-
-#### Data.com
+### Data.com
 
 Know the difference between Data.com Clean and Data.com Prospector - [Data.com](https://www.salesforce.com/uk/products/data/solutions/)
 
@@ -64,10 +61,8 @@ Know how to improve query performance, including the measures you can take to av
 Know what skewing is and how it affects performance.
 
 There are two types of skewing:
-* Ownership skew
- * One person owns a large amount of records. Think one person owning lots of accounts
-* Lookup skew
- * One record is the parent to may children records. Think one account having lots of contacts or lots of opportunities
+1. Ownership skew: One person owns a large amount of records. Think one person owning lots of accounts
+2. Lookup skew: One record is the parent to many child records. Think one account having lots of contacts or lots of opportunities
 
 ### Indexing
 
