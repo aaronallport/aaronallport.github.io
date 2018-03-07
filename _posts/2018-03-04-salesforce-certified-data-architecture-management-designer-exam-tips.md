@@ -39,14 +39,11 @@ Optimization Cheat Sheet](http://resources.docs.salesforce.com/rel1/doc/en-us/st
 
 Know what responsibilities fall under which area in the enterprise:
 
-* Data Governance
- * Definition of availability, usability, integrity and security of data. Typically a "counsel" that defines procedures and oversees their execution.
+* Data Governance: Definition of availability, usability, integrity and security of data. Typically a "counsel" that defines procedures and oversees their execution.
 
-* Data Stewardship
- * Manages quality of the data and data-driven assets, such as business intelligence and reporting.
+* Data Stewardship: Manages quality of the data and data-driven assets, such as business intelligence and reporting.
 
-* Data Architect
- * The design, implementation and change management of the data model.
+* Data Architect: The design, implementation and change management of the data model.
 
 ### Data.com
 
