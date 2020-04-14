@@ -4,15 +4,11 @@
     {% include head.html %}
 
     <body>
-        {% include masthead.html %}
+        {% include page-header.html %}
+        
+        {{ content }}
 
-        <div class="content-wrapper">
-            {{ content }}
-
-            {% include aside.html %}
-        </div>
-
-        {% include footer.html %}
+        {% include page-footer.html %}
 
         {% include google-analytics.html %}
     </body>

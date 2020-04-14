@@ -3,10 +3,18 @@ layout: landing
 title: aaronallport.com
 ---
 
-<main rol="main">
+<main class="content-wrapper" role="main">
+
+    {% if paginator.page != 1 %}
+      {% include paginator.html %}
+    {% endif %}
+
   <ul class="post-list">
-    {% for post in site.posts %}
-      <li class="post-list--item"><span>{{ post.date | date_to_string }}</span><a class="post-list--item__link" href="{{ post.url }}">{{ post.title }}</a></li>
+    {% for post in paginator.posts %}
+      <li class="post-list--item"><time>{{ post.date | date_to_string }}</time><a class="post-list--item__link" href="{{ post.url }}">{{ post.title }}</a></li>
     {% endfor %}
   </ul>
+
+  {% include paginator.html %}
+
 </main>

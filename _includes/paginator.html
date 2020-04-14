@@ -1,0 +1,19 @@
+<ol class="paginator">
+
+      {% if paginator.next_page %}
+        <li>
+            <a href="/page{{paginator.next_page}}/" class="btn  btn--full  btn--secondary">Older articles</a>
+        </li>
+      {% endif %}
+  
+      {% if paginator.previous_page %}
+        <li>
+          {% if paginator.previous_page == 1 %}
+            <a href="/">Newer articles</a>
+          {% else %}
+            <a href="/page{{paginator.previous_page}}/">Newer articles</a>
+          {% endif %}
+        </li>
+      {% endif %}
+  
+  </ol>
