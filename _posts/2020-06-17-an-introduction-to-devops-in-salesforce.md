@@ -12,7 +12,7 @@ meta:
 
 > This is the first post in a series about building an effective Salesforce deployment pipeline that your whole team will love. Written by [Aaron Allport](https://linkedin.com/in/aaronallport/) and [Stuart Grieve](https://linkedin.com/in/stuart-grieve/).
 
-[Photo by Austin Distel on Unsplash](/images/devops-101.jpeg "Photo by Austin Distel on Unsplash")
+![Photo by Austin Distel on Unsplash](/images/devops-101.jpeg "Photo by Austin Distel on Unsplash")
 
 ## DevOps 101
 
@@ -34,7 +34,7 @@ Ultimately though embracing a culture of smaller, more frequent releases; risk i
 
 As software is developed, tested and released, it is monitored, and feedback is realised in each cycle of development:
 
-[Development Cycle](/images/devops-cycle.png "Development Cycle")
+![Development Cycle](/images/devops-cycle.png "Development Cycle")
 
 ## What is a Deployment Pipeline?
 
@@ -52,12 +52,12 @@ For a long time, many felt that Salesforce was lagging behind in the DevOps spac
 
 Salesforce announced the SFDX Command Line Interface at Dreamforce in 2016, and it became generally available in the Winter ’18 release. The developer community rejoiced, and DevOps practices such as Continuous Integration, Automated Testing and Infrastructure as Code were finally enabled within the Salesforce toolset.
 
-[SFDX](/images/sfdx.jpeg "SFDX")
+![SFDX](/images/sfdx.jpeg "SFDX")
 
 Let’s start with Continuous Integration, commonly referred to as CI. CI is the practice whereby developers regularly push their code to a central repository or environment, resulting in constant collaboration. This greatly reduces the chance of bugs, as no-one should be working in isolation. We mentioned earlier that SFDX is a Command Line Interface (CLI), which in layman’s terms is simply a way to control software using text commands. Armed with SFDX, every developer on a team now had a super lightweight tool to retrieve and deploy metadata, run tests and create disposable environments. Being a CLI, it created the opportunity to integrate with a vast selection of automation tools, which can monitor the changes the team are making and automatically trigger builds to your Salesforce environments.
 Just as deployments were able to be automated, the same was true for testing. Previously developers would have perfectly functioning code and hand it over to operations, moving onto the next feature; only to be told that after being combined with the rest of the team’s work it is now failing. SFDX has an array of testing commands to fulfil all our testing needs. Coupled with our automation tools, we can create gates whereby any new changes must be tested rigorously before entering the core codebase.
 
-[The Wall of Confusion](/images/wall-of-confusion.jpeg "The Wall of Confusion")
+![The Wall of Confusion](/images/wall-of-confusion.jpeg "The Wall of Confusion")
 
 Finally, Infrastructure as Code. Salesforce professionals have environments they can safely build on, whether that be Developer Editions or Sandboxes. However, creating a new Sandbox can take some time- maybe a few hours, maybe a couple of days. It varies depending on the level of customisation on the source environment being copied, organisation size and who else is in the queue in front of you. SFDX introduced Scratch Orgs, disposable environments which can be created in seconds. Using a definition file to describe what features and settings are required, a developer can create a new environment to build or test changes by executing a single command. Manage this file at a project level, and you can be assured that your whole team are working in consistent environments.
 
