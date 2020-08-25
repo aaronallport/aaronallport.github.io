@@ -1,6 +1,6 @@
 ---
 layout: post
-title: DevOps in Salesforce: Failing to Plan is Planning to Fail
+title: DevOps in Salesforce - Failing to Plan is Planning to Fail
 status: published
 type: post
 published: true
