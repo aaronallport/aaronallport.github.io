@@ -105,27 +105,27 @@ Feel free to follow along with us as we implement a pipeline! Before you start, 
 
 1. Open your terminal/ command prompt. Change your working directory to your desktop, and create a new directory to store the generate files:
    
-`#!bash $ mkdir certificates $ cd certificates`
+    `#!bash $ mkdir certificates $ cd certificates`
 
 1. Generate an RSA private key, replacing <password> with your own password
    
-`#!bash $ openssl genrsa -des3 -passout pass:<password> -out server.pass.key 2048`
+    `#!bash $ openssl genrsa -des3 -passout pass:<password> -out server.pass.key 2048`
 
 1. Create a key file from the server.pass.key file using the same password from the previous step
 
-`#!bash $ openssl rsa -passin pass:<password> -in server.pass.key -out server.key`
+    `#!bash $ openssl rsa -passin pass:<password> -in server.pass.key -out server.key`
 
 1. Delete the server.pass.key
 
-`#!bash $ rm server.pass.key`
+    `#!bash $ rm server.pass.key`
 
 1. Request and generate the certificate. You will be asked a series of questions, these can be completed or skipped. When prompted for the challenge password, press enter to skip
 
-`#!bash $ openssl req -new -key server.key -out server.csr`
+    `#!bash $ openssl req -new -key server.key -out server.csr`
 
 1. Generate the SSL certificate
 
-`#!bash $ openssl x509 -req -sha256 -days 365 -in server.csr -signkey server.key -out server.crt`
+    `#!bash $ openssl x509 -req -sha256 -days 365 -in server.csr -signkey server.key -out server.crt`
 
 #### Encrypt the server.key for secure storage in the repository
 
@@ -207,7 +207,7 @@ At this point, your commit has been pushed to your repository and Bitbucket Pipe
 1. Hit **Activation…**, then **Assign as Org Default**, and **Save**
 1. After selecting the back button and navigating back to the Sales app home page, you should be greeted with your new component congratulating you on your success
 
-![Congratulations, you've set up a CI process!](/images/doinsf-iyp3.jpeg "Congratulations, you've set up a CI process!")
+![Congratulations, you've set up a CI process!](/images/doinsf-iyp3.png "Congratulations, you've set up a CI process!")
 
 Following the Branching Model concepts discussed earlier, you now have the basis for a well-structured workflow a team could use to merge their changes into a central org in an incredibly organised manner.
 
