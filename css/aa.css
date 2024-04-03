@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=EB+Garamond&family=Spinnaker&display=swap');
-
 /*
  *  NORMALISE
  */
@@ -104,7 +102,7 @@ select {
 
 [role=banner] h1 {
     border-bottom: 2px solid rgb(51, 51, 51);
-    font-family: 'Spinnaker', sans-serif;
+    font-family: 'Arial', sans-serif;
     text-transform: uppercase;
 }
 
@@ -132,7 +130,7 @@ ol.paginator {
 
 .paginator li a {
     color: rgb(0, 128, 128);
-    font-family: 'Spinnaker', sans-serif;
+    font-family: 'Arial', sans-serif;
     text-decoration: none;
     text-transform: uppercase;
 }
@@ -151,14 +149,14 @@ ol.paginator {
 
 .post-list--item time {
     display: block;
-    font-family: 'Spinnaker', sans-serif;
+    font-family: 'Arial', sans-serif;
     font-size: 0.75em;
     text-transform: uppercase;
 }
 
 .post-list--item__link {
     color: rgb(51, 51, 51);
-    font-family: 'EB Garamond', serif;
+    font-family: serif;
     font-size: 1.75em;
     text-decoration: none;
 }
@@ -170,7 +168,7 @@ ol.paginator {
 [role=contentinfo] {
     background-color: rgb(51, 51, 51);
     color: rgb(255, 255, 255);
-    font-family: 'Spinnaker', sans-serif;
+    font-family: 'Arial', sans-serif;
     padding: 1em;
     text-align: center;
 }
@@ -180,17 +178,17 @@ ol.paginator {
 }
 
 .post-title {
-    font-family: 'Spinnaker', sans-serif;
+    font-family: 'Arial', sans-serif;
     text-transform: uppercase;
 }
 
 .meta {
-    font-family: 'Spinnaker', sans-serif;
+    font-family: 'Arial', sans-serif;
     text-transform: uppercase;
 }
 
 .post {
-    font-family: 'EB Garamond', serif;
+    font-family: serif;
     font-size: 1.2em;
 }
 
@@ -200,24 +198,24 @@ ol.paginator {
 }
 
 .post h1 {
-    font-family: 'Spinnaker', sans-serif;
+    font-family: 'Arial', sans-serif;
     font-size: 1.5em;
 }
 
 .post h2 {
-    font-family: 'Spinnaker', sans-serif;
+    font-family: 'Arial', sans-serif;
 }
 
 .post h3 {
-    font-family: 'Spinnaker', sans-serif;
+    font-family: 'Arial', sans-serif;
 }
 
 .post h4 {
-    font-family: 'Spinnaker', sans-serif;
+    font-family: 'Arial', sans-serif;
 }
 
 .post ul li {
-    font-family: 'EB Garamond', serif;
+    font-family: serif;
     margin-bottom: 0.5em;
 }
 
@@ -226,18 +224,18 @@ ol.paginator {
 }
 
 .post ul li ul li{
-  font-family: 'EB Garamond', serif;
+  font-family: serif;
   font-size: 1em;
   margin-bottom: 0.5em;
 }
 
 .post ol li {
-    font-family: 'EB Garamond', serif;
+    font-family: serif;
     margin-bottom: 0.5em;
 }
 
 .post ul li p {
-    font-family: 'EB Garamond', serif;
+    font-family: serif;
     font-size: 1em;
 }
 
