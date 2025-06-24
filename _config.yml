@@ -8,7 +8,7 @@
 # For technical reasons, this file is *NOT* reloaded automatically when you use
 # 'bundle exec jekyll serve'. If you change this file, please restart the server process.
 #
-# If you need help with YAML syntax, here are some quick references for you: 
+# If you need help with YAML syntax, here are some quick references for you:
 # https://learn-the-web.algonquindesign.ca/topics/markdown-yaml-cheat-sheet/#yaml
 # https://learnxinyminutes.com/docs/yaml/
 #
@@ -21,14 +21,14 @@
 title: aaronallport.com
 email: aaron@aaronallport.com
 description: >- # this means to ignore newlines until "baseurl:"
-  Virtual home of Aaron Allport, Salesforce Solution Principal from Colchester, UK.
+  The virtual home of Aaron Allport, a Salesforce Quote-to-Cash specialist from Colchester, UK.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://aaronallport.com"
+url: "https://aaronallport.com" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: aaronallport
 github_username:  aaronallport
-future: true
 
 # Build settings
+theme: minima
 markdown: kramdown
 paginate: 10
 plugins:

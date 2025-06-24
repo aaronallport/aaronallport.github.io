@@ -14,11 +14,11 @@ meta:
 
 Following both attendance of the excellant <a title="RWD Summit" href="http://environmentsforhumans.com/2013/responsive-web-design-summit/" target="_blank">RWD summit</a> and reading about the <a title="SASS media query mixin by Always Twisted" href="http://alwaystwisted.com/post.php?s=2013-04-01-my-media-query-mixin">SASS media query mixin by Always Twisted</a>, I decided to re-think my project SASS structure going forward. Check this baby out:
 
-<code>
+{% highlight scss %}
 @mixin media-query-bp($unit, $query1: min, $query2: width, $target: "") {
-// Check if breakpoints are in use
-$mqtarget: "";
-@if $media-queries-supported == true {
+  // Check if breakpoints are in use
+  $mqtarget: "";
+  @if $media-queries-supported == true {
 @if $target != "" {
 @media #{$target} and (#{$query1}-#{$query2}: #{$unit}) {
 @content;
@@ -36,36 +36,38 @@ $mqtarget: "";
 }
 }
 }
-</code>
+{% endhighlight %}
 
 This modified version of the aforementioned media query mixin allows for an optional "target" to be set (screen, tv, handheld, etc). Default is assumed to be no target (same as writing "all"). This media query mixin can be called in the following way:
 
-<code>
+{% highlight ruby %}
 @include media-query-bp(30em) {
 body {
 background-color: #fff;
 }
 }
-</code>
+{% endhighlight %}
 
 This results in the following:
 
-<code> @media (min-width: 30em) {
+{% highlight scss %}
+@media (min-width: 30em) {
 body {
 background-color: #fff;
 }
 }
-</code>
+{% endhighlight %}
 
 OR the following:
 
-<code> .no-mq
+{% highlight scss %}
+.no-mq
 {
 body {
 background-color: #fff;
 }
 }
-</code>
+{% endhighlight %}
 
 <h2>What is $media-queries-supported all about?</h2>
 
@@ -83,23 +85,23 @@ The media query mixin may be called with additional (although totally optional) 
 
 <h3>Additional usage example</h3>
 
-<code>
+{% highlight scss %}
 @include media-query-bp(420px, max, height, screen) {
 body {
 background-color: #fff;
 }
 }
-</code>
+{% endhighlight %}
 
 This results in the following:
 
-<code>
+{% highlight scss %}
 @media screen and (max-height: 420px) {
 body {
 background-color: #fff;
 }
 }
-</code>
+{% endhighlight %}
 
 <h2>Organising your SASS files for minimal maintenance</h2>
 &nbsp;
@@ -108,21 +110,21 @@ Next up is a way to arrange SASS project files to minimise the amount of mainten
 
 mq.scss:
 
-<code>
+{% highlight scss %}
 $media-queries-supported: true;
 @import "imports";
-</code>
+{% endhighlight %}
 
 no-mq.scss:
 
-<code>
+{% highlight scss %}
 $media-queries-supported: true;
 @import "imports";
-</code>
+{% endhighlight %}
 
 _imports.scss looks like so:
 
-<code>
+{% highlight scss %}
 // Import variables
 @import "variables";
 // Import mixins
@@ -133,20 +135,21 @@ _imports.scss looks like so:
 @import "partials/typography";
 @import "partials/colour";
 @import "partials/layout";
-</code>
+{% endhighlight %}
 
 Lastly, using IE conditional comments, we can add a "no-mq" class on our html element like so:
 
-<code>
-&lt;!--[if lt IE 9]&gt;&lt;!--&gt;&lt;html class="no-mq" lang="en"&gt;&lt;!--&lt;![endif]--&gt;</code>
+{% highlight html %}
+&lt;!--[if lt IE 9]&gt;&lt;!--&gt;&lt;html class="no-mq" lang="en"&gt;&lt;!--&lt;![endif]--&gt;
+{% endhighlight %}
 
 <h2>Additional tip to save bandwidth</h2>
 
 Using a slightly different conditional comment hack as above, we can ensure that we only serve one stylesheet depending on the version of IE, again utilising IE conditional comments:
 
-<code>
+{% highlight html %}
 &lt;!--[if lt IE 9]&gt; &lt;link rel="stylesheet" href="css/no-mq.css"&gt;&lt;![endif]--&gt;
 &lt;!--[if gte IE 9]&gt;&lt;!--&gt;&lt;link rel="stylesheet" href="css/mq.css" /&gt;&lt;!--&lt;![endif]--&gt;
-</code>
+{% endhighlight %}
 
 The first line will only ever be interpreted by IE 8 and below. The second line will be interpreted by IE9 and every other browser. Sure, it's a conditional comment hack, but surely one less HTTP request in today's device-agnostic web can only be a good thing?

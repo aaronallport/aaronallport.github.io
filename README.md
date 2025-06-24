@@ -1,6 +1,6 @@
 # Aaron Allport's web site
 
-Hi. Here you'll find the uncompiled Jekyll source and Grunt configuration that power my personal web site.
+Hi. Here you'll find the uncompiled Jekyll source that powers my personal web site.
 
 Have a look around. If you learn something, great! If you spot a bug or want to raise and issue, great!
 

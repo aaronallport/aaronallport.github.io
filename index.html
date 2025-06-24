@@ -1,20 +1,26 @@
 ---
-layout: landing
-title: aaronallport.com
+layout: default
 ---
 
-<main class="content-wrapper" role="main">
+<h1>Latest posts</h1>
+<!-- This loops through the paginated posts -->
+ <ul>
+  {% for post in paginator.posts %}
+    <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+  {% endfor %}
+</ul>
 
-    {% if paginator.page != 1 %}
-      {% include paginator.html %}
-    {% endif %}
-
-  <ul class="post-list">
-    {% for post in paginator.posts %}
-      <li class="post-list--item"><time>{{ post.date | date_to_string }}</time><a class="post-list--item__link" href="{{ post.url }}">{{ post.title }}</a></li>
-    {% endfor %}
-  </ul>
-
-  {% include paginator.html %}
-
-</main>
+<!-- Pagination links -->
+<div class="pagination">
+  {% if paginator.previous_page %}
+    <a href="{{ paginator.previous_page_path }}" class="previous">Previous</a>
+  {% endif %}
+  
+  <span class="page_number">Page: {{ paginator.page }} of {{ paginator.total_pages }}</span>
+  
+  {% if paginator.next_page %}
+    <a href="{{ paginator.next_page_path }}" class="next">Next</a>
+  {% else %}
+    <span class="next">Next</span>
+  {% endif %}
+</div>

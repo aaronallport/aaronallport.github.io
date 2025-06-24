@@ -20,20 +20,20 @@ Whilst modern browsers have fast JavaScript engines (especially Chrome's V8 and 
 <h3 class="h3">Put query selector objects for large operations in memory first</h3>
 As simple as this may sound, putting the jQuery object returned from a selector query into memory first, and referencing that variable can give performance gains of up to 10% in IE7 and IE8. Consider this piece of code:
 
-<code>
+{% highlight javascript %}
 $(".aClass &gt; .bClass").each(function() {
 alert($(this).classList);
 });
-</code>
+{% endhighlight %}
 
 This is expensive in terms of jQuery having to constantly pelt the DOM. This can be re-written to use a local variable before the each() is invoked:
 
-<code>
+{% highlight javascript %}
 var whatIAmQuerying = $(".aClass &gt; .bClass");
 whatIAmQuerying.each(function() {
 alert($(this).classList);
 });
-</code>
+{% endhighlight %}
 
 Much better. However, in true Columbo style, "there's just one more thing", and that involves dealing with each().
 
@@ -41,21 +41,21 @@ Much better. However, in true Columbo style, "there's just one more thing", and 
 
 The each() function in jQuery, whilst helpful, is very inefficient in terms of performance. It essentially wraps the for loop, using the return from a jQuery selector or a jQuery object as the basis for the items to be looped. Let's visit the example from the previous tip:
 
-<code>
+{% highlight javascript %}
 var whatIAmQuerying = $(".aClass &gt; .bClass");
 whatIAmQuerying.each(function() {
 alert($(this).classList);
 });
-</code>
+{% endhighlight %}
 
 The each function here will loop through every item in the whatAmIQuerying variable. This can be re-written using a for loop, which gives the performance gain of not having to create and invoke an anonymous function on every item in the variable being iterated. Here's the above example re-written using a for loop:
 
-<code>
+{% highlight javascript %}
 var whatIAmQuerying = $(".aClass &gt; .bClass");
 for (var i = 0; i &lt; whatIAmQuerying.length; i++) {
 alert(whatAmIQuerying[i].classList);
 };
-</code>
+{% endhighlight %}
 
 You'll notice the reference to $(this) is removed too. This is because we already have a much faster way of determining where we are (using the iterator, which I have called "i" in this case). This small change from each() to for() means up to a 20% gain typically in IE7 and IE8.
 
